@@ -1,0 +1,2 @@
+* My personal Emacs configuration
+Focus on Vim keybindings and fully featured development environment

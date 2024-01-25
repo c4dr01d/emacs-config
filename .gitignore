@@ -1,0 +1,12 @@
+auto-save/
+backup/
+eln-cache/
+eshell/
+pscratch/
+straight/
+transient/
+
+recentf-save.el
+save-place.el
+savehist.el
+history
