@@ -71,7 +71,7 @@
     "bs" #'scratch-open-project-scratch-buffer
     "bM" #'view-echo-area-messages
     "bk" `(,(commandify! (kill-buffer (current-buffer)))
-             :wk "Kill this buffer")
+           :wk "Kill this buffer")
     "br" '(revert-buffer :wk "Revert")
     "bR" '(rename-buffer :wk "Rename")
 

@@ -8,6 +8,7 @@
 (require 'eval)
 (require 'plist)
 (require 'hook)
+(require 'variable)
 (require 'distro)
 (require 'building)
 (require 'file)

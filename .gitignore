@@ -5,6 +5,7 @@ eshell/
 pscratch/
 straight/
 transient/
+org/
 
 recentf-save.el
 save-place.el

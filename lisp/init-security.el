@@ -16,6 +16,6 @@
 
 (use-package epa-file
   :demand t
-  :config (epa-file-enable))
+  :config (shutup! (epa-file-enable)))
 
 (provide 'init-security)

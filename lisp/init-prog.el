@@ -361,21 +361,21 @@ Functions are differentiated into \"special forms\", \"built-in functions\" and
   (eglot-report-progress nil)
   :config
   (+map! :keymaps 'eglot-mode-map
-    :infix "c"
-    "fF" #'eglot-format-buffer
-    "d" '(eglot-find-declaration :wk "Find declaration")
-    "i" '(eglot-find-implementation :wk "Find implementation")
-    "t" '(eglot-find-typeDefinition :wk "Find type definition")
-    "a" '(eglot-code-actions :wk "Code actions")
-    "r" '(nil :wk "refactor")
-    "rr" '(eglot-rename :wk "Rename")
-    "rR" '(eglot-code-action-rewrite :wk "Rewrite")
-    "rf" '(eglot-code-action-quickfix :wk "Quick fix")
-    "ri" '(eglot-code-action-inline :wk "Inline")
-    "re" '(eglot-code-action-extract :wk "Extract")
-    "ro" '(eglot-code-action-organize-imports :wk "Organize imports")
-    "eq" '(eglot-shutdown :wk "Shutdown")
-    "er" '(eglot-reconnect :wk "Reconnect")
-    "eQ" '(eglot-shutdown-all :wk "Shutdown all")
-    "w" '(eglot-show-workspace-configuration :wk "Eglot workspace config")))
+         :infix "c"
+         "fF" #'eglot-format-buffer
+         "d" '(eglot-find-declaration :wk "Find declaration")
+         "i" '(eglot-find-implementation :wk "Find implementation")
+         "t" '(eglot-find-typeDefinition :wk "Find type definition")
+         "a" '(eglot-code-actions :wk "Code actions")
+         "r" '(nil :wk "refactor")
+         "rr" '(eglot-rename :wk "Rename")
+         "rR" '(eglot-code-action-rewrite :wk "Rewrite")
+         "rf" '(eglot-code-action-quickfix :wk "Quick fix")
+         "ri" '(eglot-code-action-inline :wk "Inline")
+         "re" '(eglot-code-action-extract :wk "Extract")
+         "ro" '(eglot-code-action-organize-imports :wk "Organize imports")
+         "eq" '(eglot-shutdown :wk "Shutdown")
+         "er" '(eglot-reconnect :wk "Reconnect")
+         "eQ" '(eglot-shutdown-all :wk "Shutdown all")
+         "w" '(eglot-show-workspace-configuration :wk "Eglot workspace config")))
 (provide 'init-prog)

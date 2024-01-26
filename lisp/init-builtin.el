@@ -139,7 +139,7 @@ or file path may exist now."
      ,(rx (or "/elfeed-db/" "/eln-cache/" "/cache/" "/.maildir/" "/.cache/"))
      ,(rx bol "/tmp/")))
   :init
-  (recentf-mode 1))
+  (shutup! (recentf-mode 1)))
 
 (use-package time
   :hook (after-init . display-time-mode)

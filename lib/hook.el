@@ -8,8 +8,8 @@ DEPTH and LOCAL are passed as is to `add-hook'."
 	 (f-doc (format "Call `%s' in %d seconds" (symbol-name (unquote function)) secs)))
     `(eval-when-compile
        (defun ,f-name ()
-	 ,f-doc
-	 (run-with-idle-timer ,secs nil ,function))
+	,f-doc
+	(run-with-idle-timer ,secs nil ,function))
        (add-hook ,hook #',f-fname ,depth ,local))))
 
 (defvar hook-once-num 0)
@@ -20,8 +20,8 @@ DEPTH and LOCAL are passed as is to `add-hook'."
   (let ((hook (unquote hook))
 	(fn-name (intern (format "hook-once--function-%d-h" (cl-incf hook-once-num)))))
     `(add-hook ',hook (defun ,fn-name (&rest _)
-			,(macroexp-progn body)
-			(remove-hook ',hook ',fn-name)))))
+		       ,(macroexp-progn body)
+		       (remove-hook ',hook ',fn-name)))))
 
 (defun resolve-hook-forms (hooks)
   "Convert a list of modes into a list of hook symbols.
@@ -144,8 +144,8 @@ the the function.
   (macroexp-progn
    (cl-loop for (var val hook fn) in (setq-hook-fns hooks var-vals)
 	    collect `(defun ,fn (&rest args)
-		       ,(format "%s = %s" var (pp-to-string val))
-		       (setq-local ,var ,val))
+		      ,(format "%s = %s" var (pp-to-string val))
+		      (setq-local ,var ,val))
 	    collect `(add-hook ',hook #',fn -90))))
 
 (defmacro unsetq-hook! (hooks &rest vars)
